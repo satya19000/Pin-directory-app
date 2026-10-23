@@ -1,0 +1,78 @@
+[
+  {
+    "stateSlug": "andhra-pradesh",
+    "districtSlugs": [
+      "kakinada"
+    ],
+    "localities": [
+      "Kakinada"
+    ],
+    "guide": {
+      "title": "Kakinada",
+      "scope": "locality",
+      "description": "Coast, mangroves, and a sheltered bay in Andhra Pradesh",
+      "summary": "Kakinada\u2019s coastal setting connects its harbour with the Bay of Bengal. Hope Island helps shelter the bay, while the nearby Coringa landscape brings together mangroves, tidal creeks and bird habitats. These places describe the city and its surroundings, rather than a single postal delivery boundary.",
+      "highlights": [
+        {
+          "title": "Hope Island & the bay",
+          "description": "The island forms a natural breakwater for Kakinada Bay. Its coastal landscape is an important part of the city\u2019s maritime setting.",
+          "url": "https://kakinada.ap.gov.in/tourism/tourist-places/"
+        },
+        {
+          "title": "Coringa\u2019s mangrove landscape",
+          "description": "Near Kakinada, Coringa Wildlife Sanctuary protects an estuarine landscape of mangroves and tidal waterways. It is outside the city-centre PIN area.",
+          "url": "https://forests.ap.gov.in/Coringa"
+        },
+        {
+          "title": "Heritage around Samarlakota",
+          "description": "The Kumararama Bhimeswara temple at Samarlakota is one of the Pancharama shrines, with notable stone architecture. It is a regional excursion, not a landmark inside PIN 533001.",
+          "url": "https://kakinada.ap.gov.in/tourism/tourist-places/"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/District_Collector_Office_building_at_Kakinada.jpg/960px-District_Collector_Office_building_at_Kakinada.jpg",
+          "caption": "Historic collectorate building, Kakinada",
+          "author": "Adityamadhav83",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:District_Collector_Office_building_at_Kakinada.jpg",
+          "width": 960,
+          "height": 720
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Coringa_Wildlife_Sanctuary_1.jpg/960px-Coringa_Wildlife_Sanctuary_1.jpg",
+          "caption": "Egrets on the mudflats at Coringa Wildlife Sanctuary \u2014 near Kakinada",
+          "author": "Srikanth Mannepuri",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coringa_Wildlife_Sanctuary_1.jpg",
+          "width": 960,
+          "height": 514
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Satellite_kkd.jpg/960px-Satellite_kkd.jpg",
+          "caption": "Satellite view of the Kakinada coast and Hope Island",
+          "author": "NASA",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Help:Public_domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Satellite_kkd.jpg",
+          "width": 960,
+          "height": 636
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kakinada district \u2014 tourist places",
+          "url": "https://kakinada.ap.gov.in/tourism/tourist-places/"
+        },
+        {
+          "title": "Andhra Pradesh Forest Department \u2014 Coringa",
+          "url": "https://forests.ap.gov.in/Coringa"
+        }
+      ],
+      "reviewedOn": "2026-10-23",
+      "provenance": "curated"
+    }
+  }
+]

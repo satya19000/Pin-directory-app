@@ -1,0 +1,47 @@
+{
+  "name": "india-pin-directory",
+  "version": "1.1.0",
+  "description": "India PIN Code & Postal Directory: Next.js, SQLite FTS5, programmatic SEO",
+  "scripts": {
+    "dev": "next dev",
+    "build": "node --import tsx scripts/prepare-data.ts && node --import tsx scripts/check-deployment.ts && next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "data:import": "node --import tsx scripts/import-data.ts",
+    "data:sample": "node --import tsx scripts/import-data.ts --input data/sample.json",
+    "test": "node --import tsx --test tests/data.test.ts tests/sitemaps.test.ts tests/areas.test.ts",
+    "test:e2e": "playwright test",
+    "benchmark": "node --import tsx scripts/benchmark.ts",
+    "test:http": "node --import tsx --test tests/http.test.ts",
+    "predev": "node --import tsx scripts/prepare-data.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "csv-parse": "7.0.3",
+    "lucide-react": "1.52.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1",
+    "@next/env": "16.3.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

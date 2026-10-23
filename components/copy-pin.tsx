@@ -1,0 +1,4 @@
+'use client';
+import { useState, useEffect, useRef } from 'react';
+import { Check, Copy } from 'lucide-react';
+export function CopyPin({pin}:{pin:string}) {const [status,setStatus]=useState('');const timer=useRef<ReturnType<typeof setTimeout>|null>(null);useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current);},[]); async function copy(){try{await navigator.clipboard.writeText(pin);setStatus('Copied!');}catch{setStatus('Select the PIN to copy');}if(timer.current)clearTimeout(timer.current);timer.current=setTimeout(()=>setStatus(''),2500);}return <span className="copy-wrap"><button type="button" onClick={copy} className="copy-button" aria-label={`Copy PIN code ${pin}`}>{status==='Copied!'?<Check size={16}/>:<Copy size={16}/>}<span>{status==='Copied!'?'Copied!':'Copy'}</span></button><span className="sr-only" role="status">{status}</span></span>;}

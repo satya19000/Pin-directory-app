@@ -1,0 +1,11 @@
+import type { Metadata, Viewport } from 'next';
+import Link from 'next/link';
+import { MapPin, ExternalLink } from 'lucide-react';
+import { AdProvider, AdSlot } from '@/components/ads';
+import { getDataset } from '@/lib/db';
+import { pageMetadata, siteUrl } from '@/lib/seo';
+import './globals.css';
+export const runtime='nodejs';
+export const metadata:Metadata={metadataBase:new URL(siteUrl),...pageMetadata('India PIN Code & Postal Directory | PIN Atlas','Find Indian PIN codes, post offices and postal areas. Browse the directory by state and district.','/')};
+export const viewport:Viewport={themeColor:'#113d39'};
+export default function RootLayout({children}:{children:React.ReactNode}) {const data=getDataset();return <html lang="en-IN"><body><AdProvider productionData={data.kind==='production'}><a href="#main" className="skip-link">Skip to content</a><header className="site-header"><div className="container header-inner"><Link href="/" className="brand" aria-label="PIN Atlas home"><span className="brand-mark"><MapPin size={25} strokeWidth={2.3}/></span><span>PIN<span className="brand-light">Atlas</span><small>INDIA POSTAL DIRECTORY</small></span></Link><nav aria-label="Main navigation"><Link href="/#states">Browse states</Link><Link href="/#how-it-works">PIN code guide</Link><a href="https://www.indiapost.gov.in/" target="_blank" rel="noopener noreferrer" className="official-link">India Post <ExternalLink size={13}/></a></nav></div></header>{data.kind==='sample'&&<div className="sample-banner">Preview dataset · {data.records} sample offices. Full India data has not been imported.</div>}<main id="main">{children}</main><footer className="site-footer"><div className="container footer-top"><div><Link className="footer-brand" href="/">PIN Atlas<span> / India</span></Link><p>An independent directory for finding postal information.<br/>Verify important mailing details with India Post.</p></div><div><Link href="/about">About & data sources</Link><Link href="/privacy">Privacy policy</Link><Link href="/terms">Terms of use</Link></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} PIN Atlas</span><span>Not affiliated with India Post or the Government of India.</span></div></footer><AdSlot placement="anchor"/></AdProvider></body></html>;}

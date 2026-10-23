@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+playwright-report/
+data/*.tmp*
+data/*.benchmark*
+data/input.*
+
+# Generated locally/build-time; source JSON is versioned.
+data/*.sqlite
+docs/previews/

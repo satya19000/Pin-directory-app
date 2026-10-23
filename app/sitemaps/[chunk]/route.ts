@@ -1,0 +1,4 @@
+import { urlChunk,urlCount,getDataset } from '@/lib/db';
+import { absolute,canIndex,xmlEscape } from '@/lib/seo';
+export const revalidate=86400;
+export async function GET(_request:Request,{params}:{params:Promise<{chunk:string}>}){const {chunk}=await params;const n=Number(chunk);if(!canIndex()||!/^\d+$/.test(chunk)||!Number.isSafeInteger(n)||n<1||n>Math.ceil(urlCount()/10000))return new Response('Not found',{status:404});const date=getDataset().importedAt;const xml=`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urlChunk(n,10000).map(r=>`<url><loc>${xmlEscape(absolute(r.path))}</loc><lastmod>${date}</lastmod></url>`).join('')}</urlset>`;return new Response(xml,{headers:{'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, s-maxage=86400','X-Robots-Tag':'noindex'}});}
